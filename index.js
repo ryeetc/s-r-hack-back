@@ -10,7 +10,7 @@ app.use(cors())
     const videoFile = JSON.parse(readFile);
     let randomNum1 = Math.floor(Math.random() * 250)
     let randomNum2 = Math.floor(Math.random() * 250)
-    const randomVideos = [videoFile[randomNum1],videoFile[randomNum2]]
+    let randomVideos = [videoFile[randomNum1],videoFile[randomNum2]]
     res.send(randomVideos)
  })
 
