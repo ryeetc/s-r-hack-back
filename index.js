@@ -12,6 +12,12 @@ function isSameRating(movie1, movie2) {
   }
 }
 
+app.get("/all", (req,res)=>{
+    const readFile = fs.readFileSync("./movies2.json");
+    const videoFile = JSON.parse(readFile);
+    res.send(videoFile);
+})
+
 app.get("/videos", (req, res) => {
   const readFile = fs.readFileSync("./movies2.json");
   const videoFile = JSON.parse(readFile);
